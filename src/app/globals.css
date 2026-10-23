@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700;900&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --font: 'Noto Serif';
+  --accentColor: #ffd5a9;
+  --bg: #05050c;
+  --bg-card: #14141a;
+  --bg-card-hover: #1c1c26;
+  --text: #0c0c0c;
+  --text-muted: #ffeac8;
+  --text-dim: #5d5340;
+  --border: #2a2420;
+  --gold: #ffe395;
+  --gold-light: #ffe8b4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background-image: linear-gradient(var(--bg), rgb(0, 0, 0));
+  font-family: var(--font);
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--text-dim); border-radius: 3px; }
+
+h1, h2, h3, h4 {
+  font-family: var(--font), serif;
+  letter-spacing: 0.05em;
+}
+
+a { color: inherit; text-decoration: none; }

@@ -1,0 +1,84 @@
+import Navbar from '@/components/Navbar'
+import Link from 'next/link';
+import styles from '../../styles/pages/terms.module.css'
+import Footer from '@/components/Footer';
+import BackgroundImage from '@/components/Background';
+import background from '../../../public/avatarsevenhavens.png';
+
+
+export default function Page() {
+  return (
+    <main className={styles.page}>
+      <>
+        <Navbar/>
+      </>
+      <div className={styles.glow} aria-hidden="true" />
+      <div id='bg-image'><BackgroundImage bg={background} b={0.2}/></div>
+      <div className={styles.layout}>
+        <article className={styles.article}>
+          <header className={styles.header}>
+            <p className={styles.eyebrow}>Legal</p>
+            <h1 className={styles.title}>Terms of Service</h1>
+              <p className={styles.meta}>Last updated October 23, 2026</p>
+              <p className={styles.space}>Wan Shi Tong is provided by:<br></br></p>
+              <p className={styles.leadAccent}>Avatar Community Network<br/></p>        
+              <p className={styles.sublead}>Contact: <Link href='mailto:admin@atlacord.com'>admin@atlacord.com</Link></p>
+          </header>
+          <section id='acceptable-use' className={styles.section}>
+            <h2>Acceptable Use</h2>
+              <p>
+                The Service may only be used within the scope of what they are provided for, under these Terms and applicable law. Users are solely responsible for making sure that their use of the Service and/or the Service violates no applicable law, regulations or third-party rights.<br></br><br></br>
+                Therefore, the Owner reserves the right to take any appropriate measure to protect its legitimate interests including denying Users access to the Service, terminating contracts, reporting any misconduct performed through the Service to the competent authorities - such as judicial or administrative authorities - whenever Users are suspected to be in violation of any laws, regulations, third-party rights and/or these Terms, including, but not limited to, by engaging in any of the following activities:
+              </p>
+              <h3>Conduct Restrictions</h3>
+                <ul>
+                  <li>Defaming, abusing, harassing, using threatening practices, threatening or violating the legal rights of others in any other way;</li>
+                  <li>Promoting activity that may endanger the User's life or the life of any other User or lead to physical harm. This includes but is not limited to suicide threats or instigations, intentional physical trauma, the use of illegal drugs, or excessive drinking. Under no circumstance is any User allowed to post any content promoting and/or encouraging and/or showing any self-destructive or violent behavior on Wan Shi Tong;</li>
+                  <li>Probing, scanning or testing the vulnerability of Wan Shi Tong, including the services or any network connected to the website, nor breaching the security or authentication measures on Wan Shi Tong, including the services or any network connected to Wan Shi Tong;</li>
+                  <li>Using Wan Shi Tong or the technical infrastructure in an abusive, excessive or otherwise inappropriate way (for example: for spamming purposes);</li>
+                  <li>Attempting to disrupt or tamper with the technical infrastructure in a manner that harms or places an undue burden on Wan Shi Tong;</li>
+                </ul>
+              <h3>Excessive use of the Service</h3>
+                <ul>
+                  <li>Using a resource of the Service excessively in relation to other Users of the Service - in such cases, the Owner, at its sole discretion, additionally reserves the right to suspend the User's account or limit the related activity until the User reduces the excessive consumption;</li>
+                </ul>
+              <h3>Scraping</h3>
+                <ul>
+                  <li>Adopting any automated process to extract, harvest or scrape information, data and/or content from the Service and all the digital properties thereto related unless where explicitly allowed to do so by the Owner;</li>
+                </ul>
+            <h2>Changes to These Terms</h2>
+              <p>
+                The Owner reserves the right to amend or otherwise modify these Terms at any time. In such cases, the Owner will appropriately inform the User of these changes.<br></br><br></br>
+                Such changes will only affect the relationship with the User from the date communicated to Users onwards.<br></br><br></br>
+                The continued use of the Service will signify the User's acceptance of the revised Terms. If Users do not wish to be bound by the changes, they must stop using the Service and may terminate the Agreement.<br></br><br></br>
+                The applicable previous version will govern the relationship prior to the User's acceptance. The User can obtain any previous version from the Owner.<br></br><br></br>
+                If legally required, the Owner will notify Users in advance of when the modified Terms will take effect.
+              </p>
+          </section>
+          <section id='legal-definitions' className={styles.section}>
+            <h2>Definitions and Legal References</h2>
+              <h3>Wan Shi Tong</h3>
+                <p>
+                  The property that enables the provision of the Service.
+                </p>
+              <h3>Owner (or We)</h3>
+                <p>
+                  Indicates the natural person(s) or legal entity that provides Wan Shi Tong and/or the Service to Users.
+                </p>
+              <h3>Service</h3>
+                <p>
+                  The service provided by Wan Shi Tong as described in these Terms and on Wan Shi Tong.
+                </p>
+              <h3>User (or You)</h3>
+                <p>
+                  Indicates any natural person or legal using Wan Shi Tong.
+                </p>
+          </section>
+        </article>
+      </div>
+    <>
+    <Footer/>
+    </>
+   </main>
+  )
+}

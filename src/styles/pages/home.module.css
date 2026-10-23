@@ -1,0 +1,203 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 8rem 2rem 4rem;
+}
+
+.bgGrid {
+  position: absolute;
+  inset: 0;
+  background-size: 60px 60px;
+  mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+}
+
+.bgGlow {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  pointer-events: none;
+}
+
+@keyframes drift {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(30px, -20px); }
+}
+
+.content {
+  position: relative;
+  text-align: center;
+  max-width: 720px;
+  z-index: 1;
+  animation: fadeUp 1s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.eyebrow {
+  font-family: var(--font), serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(3rem, 9vw, 5rem);
+  font-weight: 650;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin-bottom: 1.5rem;
+}
+
+.titleAccent {
+  background: linear-gradient(135deg, var(--accentColor) 0%, #ffeccd 50%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: #edcfa9;
+  line-height: 1.8;
+  margin-bottom: 2.5rem;
+  max-width: 620px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  font-family: var(--font), serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  background: linear-gradient(var(--x), var(--btnAccent1) 0%, var(--btnAccent2) 50%, var(--btnAccent3) 100%);
+  --x: 10%;
+  --y: 10%;
+  color: var(--bg);
+  border-radius: 2px;
+  font-weight: 700;
+  transition: var(--btnAccent1) 0.4s, var(--btnAccent2) 0.4s, var(--btnAccent3) 0.4s, --x 60s linear;
+  animation:a 1s linear infinite alternate;
+}
+
+.btnPrimary:hover {
+  --btnAccent1: #e9d49c;
+  --btnAccent2: #ffeccd;
+  --btnAccent3: #f0c96e;
+  --x: 4090deg;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(201,168,76,0.3);
+}
+
+@property --x {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 130deg;
+}
+
+@property --y {
+  syntax: '<percentage>';
+  inherits: false;
+  initial-value: 10%;
+}
+
+@keyframes a{
+  from {
+  --a:20deg;
+  --l:10%;
+  --c:var(--btnAccent1);
+  }
+  50% {
+    --c:var(--btnAccent2);
+  }
+  to {
+  --a:300deg;
+  --l:40%;
+  --c:var(--btnAccent3);
+  }
+}
+
+@property --btnAccent1 {
+  syntax: '<color>';
+  initial-value: #e9d49c;
+  inherits: false;
+}
+
+@property --btnAccent2 {
+  syntax: '<color>';
+  initial-value: #e9d49c;
+  inherits: false;
+}
+
+@property --btnAccent3 {
+  syntax: '<color>';
+  initial-value: #e9d49c;
+  inherits: false;
+}
+
+.btnSecondary {
+  font-family: var(--font), serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 0.9rem 2rem;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  border-radius: 2px;
+  transition: all 0.25s;
+}
+
+.btnSecondary:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+.scroll {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font), serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.scrollLine {
+  display: block;
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(to bottom, var(--gold-light), transparent);
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}
