@@ -13,21 +13,20 @@ export default function Page() {
       
     </>
      <div className={styles.glow} aria-hidden="true" />
-      <div id='bg-image'><BackgroundImage bg={background} b={0.2}/></div>
+      <div id='bg-image'><BackgroundImage bg={background} b={0.15}/></div>
      <div className={styles.layout}>
        <article className={styles.article}>
          <header className={styles.header}>
            <p className={styles.eyebrow}>Legal</p>
            <h1 className={styles.title}>Privacy <span className={styles.titleAccent}>Policy</span></h1>
-           <p className={styles.meta}>Last updated October 23, 2026</p>
-           <p className={styles.lead}>Wan Shi Tong is a trivia application for Discord that allows users to test their knowledge by responding to a series of questions related to a user-provided topic.<br></br><br></br></p>
-           <p className={styles.sublead}>The bot's source code is available at <Link className={styles.link} href='https://github.com/atlacord/trivia-bot'>https://github.com/atlacord/trivia-bot</Link>.</p>
+            <p className={styles.meta}>Last updated October 23, 2026</p>
+            <p className={styles.lead}>Wan Shi Tong is a trivia application for Discord that allows users to test their knowledge by responding to a series of questions related to a user-provided topic.<br></br><br></br></p>
          </header>
 
          <section id='data-collection' className={styles.section}>
            <h2>Information we collect</h2>
            <p>We collect basic usage data for analysis purposes. This includes the following:</p>
-            <ul>
+            <ul className='list-disc pl-5'>
                 <li>Guild ID</li>
                 <li>Trivia topics</li>
                 <li>Trivia session scores</li>

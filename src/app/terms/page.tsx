@@ -13,7 +13,7 @@ export default function Page() {
         <Navbar/>
       </>
       <div className={styles.glow} aria-hidden="true" />
-      <div id='bg-image'><BackgroundImage bg={background} b={0.2}/></div>
+      <div id='bg-image'><BackgroundImage bg={background} b={0.15}/></div>
       <div className={styles.layout}>
         <article className={styles.article}>
           <header className={styles.header}>
@@ -31,7 +31,7 @@ export default function Page() {
                 Therefore, the Owner reserves the right to take any appropriate measure to protect its legitimate interests including denying Users access to the Service, terminating contracts, reporting any misconduct performed through the Service to the competent authorities - such as judicial or administrative authorities - whenever Users are suspected to be in violation of any laws, regulations, third-party rights and/or these Terms, including, but not limited to, by engaging in any of the following activities:
               </p>
               <h3>Conduct Restrictions</h3>
-                <ul>
+                <ul className='list-disc pl-5'>
                   <li>Defaming, abusing, harassing, using threatening practices, threatening or violating the legal rights of others in any other way;</li>
                   <li>Promoting activity that may endanger the User's life or the life of any other User or lead to physical harm. This includes but is not limited to suicide threats or instigations, intentional physical trauma, the use of illegal drugs, or excessive drinking. Under no circumstance is any User allowed to post any content promoting and/or encouraging and/or showing any self-destructive or violent behavior on Wan Shi Tong;</li>
                   <li>Probing, scanning or testing the vulnerability of Wan Shi Tong, including the services or any network connected to the website, nor breaching the security or authentication measures on Wan Shi Tong, including the services or any network connected to Wan Shi Tong;</li>
