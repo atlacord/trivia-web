@@ -1,20 +1,8 @@
 import { bindings, defineConfig, defineWorker } from 'cf/config';
 import { createWorkersResponseStoreServiceBindingConfig } from '@vinext/cloudflare/cache/config';
 
-const responseStore = await createWorkersResponseStoreServiceBindingConfig({
-  worker: {
-    name: 'trivia-web-response-store',
-    compatibilityDate: '2026-10-25',
-    compatibilityFlags: ['nodejs_compat'],
-  },
-  bucket: 'trivia-web-response-store-cache-bodies',
-});
-
-export const responseStoreServiceBinding = responseStore.serviceBindingWorker;
-
 export default defineConfig({
   worker: defineWorker({
-    ...responseStore.applicationWorker,
     name: 'trivia-web',
     entrypoint: 'vinext/server/fetch-handler',
     compatibilityDate: '2026-10-25',
@@ -25,7 +13,6 @@ export default defineConfig({
       runWorkerFirst: ['/*', '!/_next/static/*', '!/*/_next/static/*'],
     },
     env: {
-      ...responseStore.applicationWorker.env,
       ASSETS: bindings.assets(),
       IMAGES: bindings.images(),
     },

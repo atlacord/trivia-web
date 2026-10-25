@@ -15,7 +15,7 @@ export default function Footer() {
           <a href="/terms">Terms of Service</a>
         </nav>
         <p className={styles.legal}>
-          Copyright 2026 Kyle S & Avatar Community Network.<br></br>
+          © 2026 Kyle S & Avatar Community Network.<br></br>
           Wan Shi Tong and all related titles, logos, and characters are copyrights of Viacom International, Inc., a subsidiary of Skydance Corporation. All rights reserved.
         </p>
       </div>
