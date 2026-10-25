@@ -62,10 +62,13 @@
 }
 
 .titleAccent {
-  background: linear-gradient(135deg, var(--accentColor) 0%, #ffeccd 50%, var(--gold-light) 100%);
+  background: linear-gradient(var(--x), var(--gold) 0%, #ffd188 50%, var(--gold-light) 100%);
+  --x: 10%;
+  --y: 10%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: logoAnimation 60s linear infinite alternate;
 }
 
 .subtitle {
@@ -91,17 +94,18 @@
   letter-spacing: 0.12em;
   text-transform: uppercase;
   padding: 0.9rem 2rem;
-  background: linear-gradient(var(--x), var(--btnAccent1) 0%, var(--btnAccent2) 50%, var(--btnAccent3) 100%);
+  background: linear-gradient(var(--gold) 0%, var(--gold-light) 100%);
   --x: 10%;
   --y: 10%;
   color: var(--bg);
   border-radius: 2px;
   font-weight: 700;
-  transition: var(--btnAccent1) 0.4s, var(--btnAccent2) 0.4s, var(--btnAccent3) 0.4s, --x 60s linear;
-  animation:a 1s linear infinite alternate;
+  transition: --btnAccent1 0.4s, --btnAccent2 0.4s, --btnAccent3 0.4s, --x 60s linear;
+  animation: a 1s linear infinite alternate;
 }
 
 .btnPrimary:hover {
+  background: linear-gradient(var(--x), var(--btnAccent1) 0%, var(--btnAccent2) 50%, var(--btnAccent3) 100%);
   --btnAccent1: #e9d49c;
   --btnAccent2: #ffeccd;
   --btnAccent3: #f0c96e;
@@ -122,7 +126,7 @@
   initial-value: 10%;
 }
 
-@keyframes a{
+@keyframes a {
   from {
   --a:20deg;
   --l:10%;
@@ -195,6 +199,15 @@
   width: 1px;
   height: 40px;
   background: linear-gradient(to bottom, var(--gold-light), transparent);
+}
+
+@keyframes logoAnimation {
+  from {
+    --x: 0deg;
+  }
+  to {
+    --x: 4090deg;
+  }
 }
 
 @keyframes pulse {
