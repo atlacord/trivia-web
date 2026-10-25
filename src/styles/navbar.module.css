@@ -13,6 +13,16 @@
   border-bottom: 1px solid var(--border);
 }
 
+.logoIcon {
+  background: url('../app/icon.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 100%;
+  padding: 20px;
+  overflow: hidden;
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -25,7 +35,7 @@
 }
 
 .logoAccent {
-  background: linear-gradient(135deg, var(--accentColor) 0%, #ffeccd 50%, var(--gold-light) 100%);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -41,18 +51,18 @@
   align-items: center;
   gap: 2rem;
   list-style: none;
+  animation: slideDown 0.5s ease-out forwards;
 }
 
 .link {
   font-family: var(--font), serif;
   font-size: 0.8rem;
   letter-spacing: 0.12em;
-  color: #ffffff;
+  color: var(--gold);
   text-transform: uppercase;
-  transition: color 0.2s;
 }
 
-.link:hover { color: var(--accentColor); }
+.link:hover { color: var(--gold-light); }
 
 .cta {
   font-family: var(--font), serif;
@@ -81,12 +91,14 @@
   padding: 4px;
 }
 
-.burger span {
+.burgerBar {
   display: block;
   width: 24px;
   height: 2px;
   background: var(--text);
-  transition: all 0.2s;
+  transition: all 0.3s ease-in-out;
+  transform-origin: 1px;
+  background-color: var(--gold-light);
 }
 
 @media (max-width: 768px) {
@@ -107,3 +119,28 @@
 
   .linksOpen { display: flex; }
 }
+
+/* Animate link tab hamburger */
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Start completely above its normal position */
+    opacity: 0;                   /* Optional: start invisible */
+  }
+  to {
+    transform: translateY(0);     /* Slide down into its natural layout position */
+    opacity: 1;                   /* Optional: fade into full visibility */
+  }
+}
+
+@keyframes textSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-50px); /* Adjust distance as needed */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);    /* Returns to original position */
+  }
+}
+
+
