@@ -17,7 +17,7 @@ export default function Hero() {
             A Discord application specializing in trivia.
         </p>
         <div className={styles.actions}>
-            <a href="#invite" className={styles.btnPrimary}>Invite</a>
+            <a href="/invite" className={styles.btnPrimary}>Invite</a>
         </div>
         </div>
         <div className={styles.scroll} aria-hidden>
