@@ -10,7 +10,6 @@ export default function Page() {
     <main className={styles.page}>
     <>
       <Navbar/>
-      
     </>
      <div className={styles.glow} aria-hidden="true" />
       <div id='bg-image'><BackgroundImage bg={background} b={0.15}/></div>
@@ -39,7 +38,7 @@ export default function Page() {
       <p>If you have any questions or concerns, please email <Link href='mailto:admin@atlacord.com'>admin@atlacord.com</Link>, or visit the Avatar server at <Link href='https://discord.gg/avatar'>https://discord.gg/avatar</Link> and contact the admin team via modmail.</p>
     </div>
     <>
-    <Footer/>
+      <Footer/>
     </>
    </main>
   )
