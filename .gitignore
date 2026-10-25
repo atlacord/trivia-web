@@ -10,6 +10,8 @@
 !.yarn/releases
 !.yarn/versions
 .next
+.agents
+.vinext
 *.code-workspace
 
 # testing
@@ -41,3 +43,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+/dist/
+.vinext/
+.cloudflare/
