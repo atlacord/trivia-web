@@ -1,3 +1,4 @@
+import { Metadata, Viewport } from 'next';
 import Link from 'next/link';
 import Script from 'next/script';
 import Navbar from '@/components/Navbar'
@@ -5,6 +6,31 @@ import styles from '../../styles/pages/terms.module.css'
 import Footer from '@/components/Footer';
 import BackgroundImage from '@/components/Background';
 import background from '../../../public/library.jpg';
+
+export const metadata: Metadata = {
+  metadataBase: new URL('https://trivia.atlacord.com'),
+  title: 'Wan Shi Tong | Terms of Service',
+  description: 'A Discord application specializing in trivia.',
+  openGraph: {
+    title: 'Wan Shi Tong | Terms of Service',
+    description: 'A Discord application specializing in trivia.',
+    url: 'https://trivia.atlacord.com/terms',
+    siteName: 'Wan Shi Tong',
+    images: [
+      {
+        url: '/thumbnail.png',
+        width: 80,
+        height: 80
+      }
+    ],
+  },
+  twitter: {
+    card: 'summary',
+    title: 'Wan Shi Tong | Terms of Service',
+    description: 'A Discord application specializing in trivia.',
+    images: ['/thumbnail.png']
+  }
+};
 
 export default function Page() {
   return (
@@ -16,7 +42,7 @@ export default function Page() {
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-5P3TPPNW');
+          })(window,document,'script','dataLayer','${process.env.GTM_ID}');
         `}
       </Script>
     </head>
