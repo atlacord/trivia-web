@@ -8,6 +8,7 @@ const notoSerif = Noto_Serif({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://trivia.atlacord.com'),
   title: 'Wan Shi Tong',
   description: 'A Discord application specializing in trivia.',
   openGraph: {
