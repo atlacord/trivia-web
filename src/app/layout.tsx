@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from 'next';
-import Head from 'next/head';
 import { Noto_Serif } from 'next/font/google';
 import './globals.css';
 
@@ -7,36 +6,6 @@ const notoSerif = Noto_Serif({
   variable: '--font-noto-serif',
   subsets: ['latin'],
 });
-
-/* const discordComponent = {
-  component: {
-    type: 17,
-    accent_color: 16769941,
-    components: [
-      {
-        type: 9,
-        components: [
-          {
-            type: 10,
-            content: '# Wan Shi Tong\nA Discord application specializing in trivia.'
-          }
-        ],
-        accessory: {
-          type: 2,
-          style: 5,
-          url: 'https://trivia.atlacord.com/invite',
-          label: 'Invite'
-        }
-      },
-      {
-        'type': 11,
-        'media': {
-          'url': 'https://trivia.atlacord.com/thumbnail.png'
-        }
-      }
-    ]
-  }
-} */
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://trivia.atlacord.com'),
