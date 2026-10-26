@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { GoogleTagManager } from '@next/third-parties/google'
 import { Noto_Serif } from 'next/font/google';
 import './globals.css';
 
@@ -42,7 +43,12 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${notoSerif.variable} ${notoSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children}
+      </body>
+      <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5P3TPPNW" height="0" width="0" style={{ display:'none', visibility: 'hidden' }}>
+        </iframe>
+      </noscript>
     </html>
   );
 }

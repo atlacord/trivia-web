@@ -1,13 +1,25 @@
-import Navbar from '@/components/Navbar'
+import Script from 'next/script';
 import Link from 'next/link';
+import Navbar from '@/components/Navbar'
 import styles from '../../styles/pages/privacy.module.css'
 import Footer from '@/components/Footer';
 import BackgroundImage from '@/components/Background';
-import background from '../../../public/avatarsevenhavens.png';
+import background from '../../../public/library.jpg';
 
 export default function Page() {
   return (
     <main className={styles.page}>
+    <head>
+      <Script id='gtm'>
+        {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-5P3TPPNW');
+        `}
+      </Script>
+    </head>
     <>
       <Navbar/>
     </>
@@ -35,7 +47,7 @@ export default function Page() {
        </article>
      </div>
      <div className={styles.contact}>
-      <p>If you have any questions or concerns, please email <Link href='mailto:admin@atlacord.com'>admin@atlacord.com</Link>, or visit the Avatar server at <Link href='https://discord.gg/avatar'>https://discord.gg/avatar</Link> and contact the admin team via modmail.</p>
+      <p>If you have any questions or concerns, please email <Link href='mailto:admin@atlacord.com'>admin@atlacord.com</Link>, or visit the Avatar server at <Link href='https://trivia.atlacord.com/support?utm_source=privacy-policy'>https://discord.gg/avatar</Link> and contact the admin team via modmail.</p>
     </div>
     <>
       <Footer/>

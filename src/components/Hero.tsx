@@ -1,6 +1,6 @@
 import styles from '../styles/pages/home.module.css';
 import BackgroundImage from './Background';
-import background from '../../public/avatarsevenhavens.png';
+import background from '../../public/library.jpg';
 
 export default function Hero() {
   return (
@@ -17,7 +17,7 @@ export default function Hero() {
             A Discord application specializing in trivia.
         </p>
         <div className={styles.actions}>
-            <a href="/invite" className={styles.btnPrimary}>Invite</a>
+            <a href="/invite?utm_source=home-btn" className={styles.btnPrimary}>Invite</a>
         </div>
         </div>
         <div className={styles.scroll} aria-hidden>
